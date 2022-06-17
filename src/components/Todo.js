@@ -22,12 +22,13 @@ const Todo = ({ todos, removeTodo, updateTodo }) => {
   return todos.map((todo, index) => (
     <div 
       key={index}
+      style={{display: "flex", padding:"10px"}}
     >
       <div>
         {todo.text}
       </div>
-      <div >
-        <button onClick={() => removeTodo(todo.id)} >Delete</button>
+      <div style={{marginLeft: "24px"}}>
+        <button onClick={() => removeTodo(todo.id)} style={{marginRight: "12px"}}>Delete</button>
         <button onClick={() => setEdit({ id: todo.id, value: todo.text })} > Edit</button>
       </div>
     </div>
